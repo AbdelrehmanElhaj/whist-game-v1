@@ -1,0 +1,26 @@
+<div class="relative w-full h-screen bg-green-700 text-white overflow-hidden">
+  <!-- Top Player -->
+  <app-player-hand position="top"></app-player-hand>
+
+  <!-- Left Player -->
+  <app-player-hand position="left"></app-player-hand>
+
+  <!-- Right Player -->
+  <app-player-hand position="right"></app-player-hand>
+
+  <!-- Bottom Player -->
+  <app-player-hand position="bottom" (playCard)="onPlayCard($event)"></app-player-hand>
+
+  <!-- Trick Area -->
+  <app-trick-area [playedCards]="playedCards"></app-trick-area>
+
+  <!-- Scoreboard -->
+  <div class="absolute top-2 right-2">
+    <app-scoreboard></app-scoreboard>
+  </div>
+
+  <!-- Game Controls -->
+  <div class="absolute bottom-2 left-2">
+    <app-game-controls></app-game-controls>
+  </div>
+</div>

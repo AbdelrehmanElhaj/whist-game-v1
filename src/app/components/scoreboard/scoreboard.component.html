@@ -1,0 +1,9 @@
+<div class="bg-black/70 text-white p-4 rounded shadow">
+  <h3 class="text-lg font-semibold mb-2">Scoreboard</h3>
+  <ul>
+    <li *ngFor="let score of scores" class="flex justify-between">
+      <span>{{ score.player }}</span>
+      <span>{{ score.points }}</span>
+    </li>
+  </ul>
+</div>
