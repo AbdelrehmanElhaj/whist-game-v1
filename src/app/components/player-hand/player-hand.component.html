@@ -1,4 +1,4 @@
-<div [ngClass]="getPositionClasses()" class="absolute flex gap-2">
+<div class="card" [ngClass]="getPositionClasses()" class="absolute flex gap-2">
   <img
     *ngFor="let card of dummyCards"
     [src]="'assets/cards/' + card + '.png'"
