@@ -1,13 +1,29 @@
 <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 grid grid-cols-3 grid-rows-3">
   <div></div>
-  <div class="flex justify-center items-center">{{ getCard('top') }}</div>
+  <div class="flex justify-center items-center">
+    <!-- North (Top) -->
+    <img *ngIf="getCard('top')" [src]="'assets/cards/' + getCard('top') + '.png'" alt="Top card"
+      class="absolute top-0 w-16 h-auto" />
+  </div>
   <div></div>
 
-  <div class="flex justify-center items-center">{{ getCard('left') }}</div>
+  <div class="flex justify-center items-center">
+    <!-- South (Bottom) -->
+    <img *ngIf="getCard('bottom')" [src]="'assets/cards/' + getCard('bottom') + '.png'" alt="Bottom card"
+      class="absolute bottom-0 w-16 h-auto" />
+  </div>
   <div></div>
-  <div class="flex justify-center items-center">{{ getCard('right') }}</div>
+  <div class="flex justify-center items-center">
+    <!-- West (Left) -->
+    <img *ngIf="getCard('left')" [src]="'assets/cards/' + getCard('left') + '.png'" alt="Left card"
+      class="absolute left-0 w-16 h-auto" />
+  </div>
 
   <div></div>
-  <div class="flex justify-center items-center">{{ getCard('bottom') }}</div>
+  <div class="flex justify-center items-center">
+    <!-- East (Right) -->
+    <img *ngIf="getCard('right')" [src]="'assets/cards/' + getCard('right') + '.png'" alt="Right card"
+      class="absolute right-0 w-16 h-auto" />
+  </div>
   <div></div>
 </div>

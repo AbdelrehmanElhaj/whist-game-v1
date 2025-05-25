@@ -8,8 +8,7 @@ import { Component, Input } from '@angular/core';
 export class TrickAreaComponent {
   @Input() playedCards: { player: string, card: string }[] = [];
 
-  getCard(position: 'top' | 'left' | 'right' | 'bottom'): string {
-    const card = this.playedCards.find(c => c.player === position);
-    return card?.card ?? '';
+  getCard(player: string): string {
+    return this.playedCards.find(c => c.player === player)?.card ?? '';
   }
 }

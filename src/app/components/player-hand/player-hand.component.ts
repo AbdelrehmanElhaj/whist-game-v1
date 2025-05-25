@@ -8,7 +8,7 @@ export class PlayerHandComponent {
   @Input() position: 'top' | 'bottom' | 'left' | 'right' = 'bottom';
   @Output() playCard = new EventEmitter<string>();
 
-  dummyCards = ['🂡', '🂢', '🂣', '🂤', '🂥'];
+  dummyCards = ['AS', 'KH', 'QD', 'JC', '10S'];
 
   getPositionClasses() {
     switch (this.position) {

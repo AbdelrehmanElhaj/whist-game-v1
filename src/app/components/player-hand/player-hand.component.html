@@ -1,8 +1,8 @@
 <div [ngClass]="getPositionClasses()" class="absolute flex gap-2">
-  <div
+  <img
     *ngFor="let card of dummyCards"
-    class="bg-white text-black p-2 rounded shadow-md cursor-pointer hover:bg-gray-200 transition"
-    (click)="handleCardClick(card)">
-    {{ card }}
-  </div>
+    [src]="'assets/cards/' + card + '.png'"
+    class="w-12 h-auto rounded shadow cursor-pointer hover:scale-110 transition"
+    (click)="handleCardClick(card)"
+    alt="Card" />
 </div>
